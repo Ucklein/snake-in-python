@@ -6,7 +6,7 @@ import random
 
 GAME_WIDTH = 700
 GAME_HEIGHT = 700
-SPEED = 50
+SPEED = 30
 SPACE_SIZE = 50
 BODY_PARTS = 3
 SNAKE_COLOR = "#00FF00"
@@ -45,13 +45,13 @@ def next_turn(snake, food):
 
     x, y = snake.coordinates[0]
 
-    if direction == "up":
+    if direction == "z":
         y -= SPACE_SIZE
-    elif direction == "down":
+    elif direction == "s":
         y += SPACE_SIZE
-    elif direction == "left":
+    elif direction == "q":
         x -= SPACE_SIZE
-    elif direction == "right":
+    elif direction == "d":
         x += SPACE_SIZE
 
     snake.coordinates.insert(0, (x, y))
